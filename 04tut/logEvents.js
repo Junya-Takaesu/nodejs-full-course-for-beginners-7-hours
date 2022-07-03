@@ -19,8 +19,15 @@ const logEvents = async (message) => {
         await fsPromises.appendFile(path.join(__dirname, 'logs', 'eventLog.txt'), logItem);
     } catch (err) {
         console.error(err);
-
     }
 };
 
-module.exports = logEvents;
+const myHoge = () => {
+    return '私の Hoge です';
+}
+
+const myFuga = () => {
+    return '私の Fuga です';
+}
+
+module.exports = {logEvents, myHoge, myFuga};

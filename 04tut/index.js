@@ -1,4 +1,4 @@
-const logEvents = require('./logEvents');
+const {logEvents, myHoge, myFuga} = require('./logEvents');
 
 const EventEmitter = require('events');
 
@@ -13,4 +13,6 @@ myEmitter.on('log', (msg) => logEvents(msg));
 setTimeout(() => {
     // Emit event
     myEmitter.emit('log', 'Log event emitted!');
+    console.log(myFuga());
+    console.log(myHoge());
 }, 2000);
